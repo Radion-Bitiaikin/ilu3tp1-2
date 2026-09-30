@@ -6,5 +6,10 @@ public class Attaque extends Bataille {
 		super(type);
 		// TODO Auto-generated constructor stub
 	}
+	
+	public String toString()
+	{
+		return type.getAffichageAttaque();
+	}
 
 }
