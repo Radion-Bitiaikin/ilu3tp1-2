@@ -41,11 +41,12 @@ public class JeuDeCartes {
 	}
 
 	public Carte[] donnerCartes() {
-		Carte cartes[] = new Carte[19];
+		Carte cartes[] = new Carte[106];
 
 		for (int i = 0, k = 0; i < 19; i++) {
 			for (int j = 0; j < typesDeCartes[i].getNbExemplaires(); j++) {
 				cartes[k] = typesDeCartes[i].getCarte();
+				//System.out.println(i + " " + j + " " + k + " " + cartes[k].toString());
 				k++;
 			}
 		}
