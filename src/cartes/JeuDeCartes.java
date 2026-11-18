@@ -54,6 +54,38 @@ public class JeuDeCartes {
 		return cartes;
 	}
 
+	public boolean checkCount(Carte cartes[]) {
+		if(null==cartes) return false;
+
+		int n[] = new int[19];
+		int j;
+
+		for(int i=0;i<19;i++) {
+			n[i] = typesDeCartes[i].getNbExemplaires();
+		}
+
+		for(int i=0;i<106;i++) {
+
+			if(null==cartes[i]) return false;
+
+			for(j=0;j<19;j++) {
+
+				if(cartes[i].equals(typesDeCartes[j].getCarte())) {
+					n[j]--;
+					break;
+				}
+			}
+
+			if(19==j) return false;
+		}
+
+		for(int i=0;i<19;i++) {
+			if(0!=n[i]) return false;
+		}
+
+		return true;
+	}
+
 	private class Configuration {
 
 		private int nbExemplaires;

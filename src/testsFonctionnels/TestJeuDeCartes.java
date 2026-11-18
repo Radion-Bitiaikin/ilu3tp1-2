@@ -13,6 +13,8 @@ public class TestJeuDeCartes {
 		JeuDeCartes jeu = new JeuDeCartes();
 		System.out.print("JEU:\n\n" + jeu.affichageJeuDeCartes());
 
+		System.out.println(jeu.checkCount(jeu.donnerCartes()));
+
 	}
 
 }
